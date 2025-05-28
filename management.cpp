@@ -8,7 +8,7 @@ int main()
     int Srooms = 0, Spasta = 0, Sburger = 0, Snoodles = 0, Sshake = 0, SChicken = 0;
 
     int Total_rooms = 0, Total_pasta = 0, Total_burger = 0, Total_noodles = 0, Total_shake = 0, Total_Chicken = 0;
-
+    int Total_expense = 0;
     cout << "\n\t Quantity of items we have";
     cout << "\n Rooms available: ";
     cin >> Qrooms;
@@ -39,7 +39,8 @@ m:
     cout << "\n5. Shake";
     cout << "\n6. Chicken";
     cout << "\n7. Information regarding sales and collection";
-    cout << "\n8. Exit";
+    cout << "\n8. Total Expense ";
+    cout << "\n9. Exit";
 
     cout << "\n\n\tPlease enter choice : ";
     cin >> Choice;
@@ -157,17 +158,16 @@ m:
             cout << "\nRemaining chickens: " << QChicken - SChicken;
             cout << "\nTotal collection from chickens: " << Total_Chicken;
             break;
+
         case 8:
+            Total_expense = Total_expense + Total_rooms + Total_burger + Total_pasta + Total_noodles + Total_shake + Total_Chicken;
+            cout << "Total Expense : " << Total_expense;
+        case 9:
             exit(0);
         default:
             cout << "\nPlease select a valid option!";
     }
     goto m;
-
-    int Total_expense = 0;
-
-    Total_expense = Total_expense + Total_rooms + Total_burger + Total_pasta + Total_noodles + Total_shake + Total_Chicken;
-    cout << "Total Expense : " << Total_expense;
     return 0;
 }
 
