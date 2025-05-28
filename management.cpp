@@ -164,6 +164,10 @@ m:
     }
     goto m;
 
+    int Total_expense = 0;
+
+    Total_expense = Total_expense + Total_rooms + Total_burger + Total_pasta + Total_noodles + Total_shake + Total_Chicken;
+    cout << "Total Expense : " << Total_expense;
     return 0;
 }
 
