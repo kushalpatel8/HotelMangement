@@ -46,6 +46,7 @@ m:
     cin >> Choice;
 
     switch (Choice)
+    
     {
         case 1:
             cout << "Enter the number of rooms you want: ";
